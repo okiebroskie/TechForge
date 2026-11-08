@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TechForge Admin</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="loginView" class="login-wrap">
+    <section class="login-card"><div class="brand-mark">TF</div>
+      <p class="eyebrow">TECHFORGE CONTROL CENTER</p>
+      <h1>Admin sign in</h1>
+      <p class="muted">Manage products, inventory, and customer orders.</p>
+      <form id="loginForm"><label>Email<input id="loginEmail" type="email" required autocomplete="username"></label>
+        <label>Password<input id="loginPassword" type="password" required autocomplete="current-password"></label>
+        <button class="primary full" type="submit">Sign in</button><p id="loginMessage" class="message"></p></form>
+    </section>
+  </main>
+  <div id="appView" class="app hidden">
+    <aside class="sidebar"><div class="brand"><div class="brand-mark">TF</div>
+      <div><b>TechForge</b><small>ADMIN PANEL</small></div></div>
+      <nav><button class="nav active" data-page="overview">▦ 
+        <span>Overview</span></button><button class="nav" data-page="products">▣ 
+          <span>Products</span></button><button class="nav" data-page="orders">▤ 
+            <span>Orders</span></button><button class="nav" data-page="customers">♙ 
+              <span>Customers</span></button></nav>
+      <div class="sidebar-bottom"><span id="adminEmail" class="muted small"></span><button id="logoutBtn" class="nav">↪ 
+        <span>Sign out</span></button></div>
+    </aside>
+    <section class="main"><header class="topbar"><div><p class="eyebrow">MANAGEMENT</p>
+      <h1 id="pageTitle">Overview</h1></div><span class="live"><i></i> Connected to Firebase</span></header>
+      <div id="pageContent"></div>
+    </section>
+  </div>
+  <dialog id="productDialog"><form id="productForm" method="dialog" class="dialog-form">
+    <div class="dialog-head"><div><p class="eyebrow">CATALOG</p>
+      <h2 id="productDialogTitle">Add product</h2></div>
+      <button type="button" class="icon-btn" id="closeProduct">✕</button></div>
+    <input id="productId" type="hidden"><label>Product name<input id="productName" required></label><div class="two">
+      <label>Brand<input id="productBrand" required></label>
+      <label>Category
+  <select id="productCategory" required>
+    <option value="">Select a category</option>
+    <option value="Processors">Processors</option>
+    <option value="Graphics Cards">Graphics Cards</option>
+    <option value="Motherboards">Motherboards</option>
+    <option value="Memory">Memory</option>
+    <option value="Storage">Storage</option>
+    <option value="Power Supply">Power Supply</option>
+    <option value="Cases">Cases</option>
+    <option value="Peripherals">Peripherals</option>
+  </select>
+</label>
+        <label>Price (₱)<input id="productPrice" type="number" min="0" step="0.01" required></label>
+        <label>Stock<input id="productStock" type="number" min="0" step="1" required></label></div>
+        <label>Image URL<input id="productImage" type="url" placeholder="https://..."></label>
+        <label>Description<textarea id="productDescription" rows="3"></textarea></label><p id="productMessage" class="message"></p>
+        <div class="actions"><button type="button" class="secondary" id="cancelProduct">Cancel</button>
+          <button class="primary" type="submit">Save product</button></div></form></dialog>
+  <div id="toast" class="toast"></div>
+  <script type="module" src="app.js"></script>
+</body></html>

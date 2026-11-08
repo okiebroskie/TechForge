@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "486323170899",
+    "project_id": "techforge-e-commerce-system",
+    "storage_bucket": "techforge-e-commerce-system.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486323170899:android:3872380eb03062876be0a6",
+        "android_client_info": {
+          "package_name": "com.example.techforge_store"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBR3qZIGkbrQvVSe2vdDz2j9W5gxTFZXkQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
